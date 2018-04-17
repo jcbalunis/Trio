@@ -38,6 +38,10 @@ void rearrangeColor (int& Red, int& Green, int& Blue)
         {
                 Red = tempB;
         }
+        if(Green = Red)
+        {
+        Green = 0;
+        }
         if(( Green < tempB) && ( Red != tempB))
         {
                 Green = tempB;
