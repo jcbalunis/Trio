@@ -30,25 +30,13 @@ void rearrangeColor (int& Red, int& Green, int& Blue)
         tempG = Green;
         tempB = Blue;
 
-        if( Green > Red )
+        if( tempG > Red )
         {
                 Red = tempG;
         }
-        if( Blue > Red) 
+        if( tempB > Red) 
         {
                 Red = tempB;
-        }
-        if(Green = Red)
-        {
-        Green = 0;
-        }
-        if(( Green < tempB) && ( Red != tempB))
-        {
-                Green = tempB;
-        }
-        if(( Green < tempR) && (Red != tempR))
-        {
-                Green = tempR;
         }
         if(Blue > tempR)
         { 
@@ -58,6 +46,23 @@ void rearrangeColor (int& Red, int& Green, int& Blue)
         {
                 Blue = tempG;
         }
+        if( Red == tempR && Blue == tempB)
+        {
+                Green = tempG;
+        }
+        if( Red == tempG && Blue == tempR)
+        {
+                Green = tempB;
+        }
+        if( Red == tempB && Blue == tempG)
+        {
+                Green = tempR;
+        }
+        if(Red == tempG && Blue == tempB)
+        {
+                Green = tempR;
+        }
+        
 
 
 
